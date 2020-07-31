@@ -34,7 +34,7 @@ def get_japanese_emoticon(file, emoticon)
 end
 
 def get_english_meaning(file, emoticon)
-  load_library(file)
+  load_library(file).each do |key, hash|
   binding.pry
   # emoticons = YAML.load_file(file)
   # new_emoticons = {}
@@ -43,7 +43,7 @@ def get_english_meaning(file, emoticon)
   #     new_emoticons[key][:english] = emoticons[key][0]
   #     new_emoticons[key][:japanese] = emoticons[key][1]
   # end
-  new_emoticons.each do |key, hash|
+  # new_emoticons.each do |key, hash|
     if new_emoticons[key][:japanese] == emoticon
       return new_emoticons[key][:english]
     else !new_emoticons[key][:japanese] == emoticon
