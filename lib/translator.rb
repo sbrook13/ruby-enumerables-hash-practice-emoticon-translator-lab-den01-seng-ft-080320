@@ -35,6 +35,7 @@ end
 
 def get_english_meaning(file, emoticon)
   load_library(file)
+  binding.pry
   # emoticons = YAML.load_file(file)
   # new_emoticons = {}
   # emoticons.each do |key, values| 
